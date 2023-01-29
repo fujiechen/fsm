@@ -4,7 +4,7 @@
 * [Overview](#overview)
 * [Demo](#demo)
 * [Technical Aspect](#technical-aspect)
-  * [Diagram](#uml-diagram)
+  * [Design Diagram](#design-diagram)
   * [Tech Skills](#tech-skills)
   * [Requirement](#requirement)
   * [File Structure](#file-structure)
@@ -41,7 +41,9 @@ Create a software module for generating an FSM (Finite State Machine). The API o
 - composer
 - PHPUnit
 
-### UML Diagram
+### Design Diagram
+
+![design_diagram](./docs/design_diagram.png)
 
 ### Tech Skills
 - Fully Object-Oriented Programming
