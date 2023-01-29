@@ -3,9 +3,12 @@
 ## Table of Content
 * [Overview](#overview)
 * [Technical Aspect](#technical-aspect)
+  * [Requirement](#requirement)
+  * [File Structure](#file-structure)
+  * [Class Structure](#class-structure)
+  * [Procedure](#procedure)
 * [Tests](#tests)
 * [Demo](#demo)
-* [Installation](#installation)
 
 
 ## Overview
@@ -83,5 +86,3 @@ The demo then calls `processList` with letter list to reproduce the 2 examples f
 The demo also add a 24 digit binary number for extra testing
 
 ![demo](./docs/demo.png)
-
-## Installation
