@@ -7,7 +7,7 @@ require '../vendor/autoload.php';
 use FSM\Alphabet\Letter;
 use FSM\FSM\FSMArrayBuilder;
 use FSM\FSM\FSMObjectBuilder;
-use FSM\FSMService;
+use FSM\FSM\FSMService;
 use FSM\State\FinalState;
 use FSM\Transition\Transition;
 

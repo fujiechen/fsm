@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Tests;
+namespace Test\FSM;
 
 use FSM\Alphabet\Letter;
 use FSM\FSM\FSM;
 use FSM\FSM\FSMArrayBuilder;
-use FSM\FSMService;
+use FSM\FSM\FSMService;
 use FSM\State\FinalState;
 use FSM\State\State;
 use FSM\Transition\Transition;

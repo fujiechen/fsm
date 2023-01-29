@@ -2,30 +2,57 @@
 
 ## Table of Content
 * [Overview](#overview)
+* [Demo](#demo)
 * [Technical Aspect](#technical-aspect)
+  * [Diagram](#uml-diagram)
+  * [Tech Skills](#tech-skills)
   * [Requirement](#requirement)
   * [File Structure](#file-structure)
   * [Class Structure](#class-structure)
   * [Procedure](#procedure)
 * [Tests](#tests)
-* [Demo](#demo)
+
 
 
 ## Overview
 Create a software module for generating an FSM (Finite State Machine). The API of the library is designed for use by other developers. The library(class) is fully test covered. The 'mod-three' procedure is the demo for the FSM. 
 
+## Demo
+
+### Installation and Executing Instruction
+1. Require php v8.1 and composer v3
+2. Run `composer install` on project root
+3. Under project directory, `cd example`, then `php mod_three.php`
+
+### Demo examples
+1. Use FSM Array Builder to initiate FSM, then start FSM Service
+2. Call Service `processList` with letter list to reproduce the 2 examples from the instruction document
+   1. `reset` the FSM after the first example
+3. Use FSM Object Builder to initiate another FSM, then start FSM Service with new FSM instance
+4. Call Service `processList` a 24 digit binary number for heavier testing
+
+![demo](./docs/demo.png)
+
 ## Technical Aspect
 
 ### Requirement
 - PHP 8.1
-  - Xdebug (if run code coverage)
+  - Xdebug (for code coverage)
 - composer
 - PHPUnit
+
+### UML Diagram
+
+### Tech Skills
+- Fully Object-Oriented Programming
+- Fully follow SOLID principle
+- Unit Testing (100% code coverage)
+- Builder Design Pattern
+- Object Interface and Inheritance
 
 ### File Structure
 
 - `/src` is the core library
-  - The main class is named as `FSM` in `FSM.php` file
 - `/tests` is the PHPUnit test suite
 - `/example` is the example/demo of the FSM by implementing mod-three procedure
 
@@ -75,14 +102,4 @@ The Test is covering **100%** source code under src folder.
 
 ![php_codecoverage](./docs/php_code_coverage.png)
 
-## Demo
 
-1. Make sure php v8.1 and composer v3 is installed
-2. Run `composer install` on project root to have fresh autoload
-3. Go to project root, `cd example`, then `php mod_three.php`
-
-The demo initiate 3 states, and 2 letters, then use FSM Builder to make an instance.
-The demo then calls `processList` with letter list to reproduce the 2 examples from the instruction document
-The demo also add a 24 digit binary number for extra testing
-
-![demo](./docs/demo.png)

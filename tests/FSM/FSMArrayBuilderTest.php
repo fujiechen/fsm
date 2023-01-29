@@ -2,9 +2,8 @@
 
 declare(strict_types=1);
 
-namespace Tests;
+namespace Tests\FSM;
 
-use FSM\Alphabet\Alphabet;
 use FSM\Alphabet\Letter;
 use FSM\FSM\FSM;
 use FSM\FSM\FSMArrayBuilder;

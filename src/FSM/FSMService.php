@@ -2,11 +2,10 @@
 
 declare(strict_types=1);
 
-namespace FSM;
+namespace FSM\FSM;
 
 use Exception;
 use FSM\Alphabet\Letter;
-use FSM\FSM\FSM;
 
 /**
  * This class implements the Finite State Machine (FSM) based on the following abstract definition:
