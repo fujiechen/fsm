@@ -28,4 +28,18 @@ class FinalStates extends States
             }
         }
     }
+
+    /**
+     * Extend the parent function to make sure the new pushed object is FinalState
+     *
+     * @throws Exception
+     */
+    public function push(State $state): void
+    {
+        if (!($state instanceof FinalState)) {
+            throw new Exception(self::VALIDATE_INIT_FINAL_STATES_OBJECT_EXCEPTION_MESSAGE);
+        }
+
+        parent::push($state);
+    }
 }

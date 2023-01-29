@@ -48,6 +48,11 @@ class Transitions
         return $this->transitions;
     }
 
+    public function push(Transition $transition): void
+    {
+        $this->transitions[] = $transition;
+    }
+
     /**
      * Validate all transitions if
      * - all states are within given States

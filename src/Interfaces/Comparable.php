@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 namespace FSM\Interfaces;
+
 /**
  * This interface defines comparable object structure
  */

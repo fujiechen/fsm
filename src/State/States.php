@@ -36,6 +36,11 @@ class States
         $this->states = $states;
     }
 
+    public function push(State $state): void
+    {
+        $this->states[] = $state;
+    }
+
    public function getStates(): array
    {
        return $this->states;

@@ -74,4 +74,16 @@ class StatesTest extends TestCase
 
         $this->assertFalse($res);
     }
+
+    public function testPush()
+    {
+        $states = new States([new State('S1'), new State('S2'), new State('S3')]);
+
+        $states->push(new State('S4'));
+
+        $res = $states->getStates();
+
+        $this->assertCount(4, $res);
+        $this->assertEquals('S4', $res[3]->getName());
+    }
 }

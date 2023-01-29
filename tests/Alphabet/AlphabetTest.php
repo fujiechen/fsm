@@ -63,4 +63,16 @@ class AlphabetTest extends TestCase
 
         $this->assertFalse($res);
     }
+
+    public function testPush()
+    {
+        $letters = new Alphabet([new Letter('1'), new Letter('2')]);
+
+        $letters->push(new Letter('3'));
+
+        $res = $letters->getLetters();
+
+        $this->assertCount(3, $res);
+        $this->assertEquals('3', $res[2]->getValue());
+    }
 }

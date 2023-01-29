@@ -5,7 +5,7 @@ declare(strict_types=1);
 require '../vendor/autoload.php';
 
 use FSM\Alphabet\Letter;
-use FSM\FSM;
+use FSM\FSMService;
 use FSM\State\FinalState;
 use FSM\Transition\Transition;
 
@@ -40,7 +40,7 @@ $transitions = [
     new Transition($state2, $letter1, $state2),
 ];
 
-$fsm = FSM::buildFromArray($states, $alphabet, $initialState, $finalState, $transitions);
+$fsm = FSMService::buildFromArray($states, $alphabet, $initialState, $finalState, $transitions);
 
 // Example 1 - 110
 echo "Example 1 - 110:\n";

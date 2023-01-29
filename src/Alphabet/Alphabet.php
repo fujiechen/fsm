@@ -41,6 +41,11 @@ class Alphabet
         return $this->letters;
     }
 
+    public function push(Letter $letter): void
+    {
+        $this->letters[] = $letter;
+    }
+
     /**
      * Check if given other Letter is within the current Alphabet list
      *

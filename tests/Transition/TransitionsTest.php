@@ -156,4 +156,23 @@ class TransitionsTest extends TestCase
         $this->assertEquals('2', $res->getInput()->getValue());
         $this->assertEquals('S3', $res->getDestination()->getName());
     }
+
+    public function testPush()
+    {
+        $transitions = [
+            new Transition(new State('S1'), new Letter('1'), new State('S2')),
+            new Transition(new State('S2'), new Letter('2'), new State('S3')),
+        ];
+
+        $transitions = new Transitions($transitions);
+
+        $transitions->push(new Transition(new State('S3'), new Letter('3'), new State('S4')));
+
+        $res = $transitions->getTransitions();
+
+        $this->assertCount(3, $res);
+        $this->assertEquals('S3', $res[2]->getState()->getName());
+        $this->assertEquals('3', $res[2]->getInput()->getValue());
+        $this->assertEquals('S4', $res[2]->getDestination()->getName());
+    }
 }
