@@ -1,0 +1,25 @@
+{
+    "name": "fujiechen/fsm",
+    "description": "Finite State Machine",
+    "type": "library",
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "FSM\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/",
+        }
+    },
+    "authors": [
+        {
+            "name": "Fujie Chen",
+            "email": "imaple7@gmail.com"
+        }
+    ],
+    "require": {}
+}
