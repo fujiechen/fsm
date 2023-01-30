@@ -6,6 +6,7 @@ namespace FSM\FSM;
 
 use Exception;
 use FSM\Alphabet\Letter;
+use FSM\Interfaces\FSMServiceInterface;
 
 /**
  * This class implements the Finite State Machine (FSM) based on the following abstract definition:
@@ -22,7 +23,7 @@ use FSM\Alphabet\Letter;
  *
  * The API of this library is designed for use by other developers.
  */
-class FSMService
+class FSMService implements FSMServiceInterface
 {
     public const NOT_REACH_FINAL_STATE_WARNING = 'Not reach the final state yet!';
     public const INVALID_INPUT_WARNING = 'The given input is not in alphabet!';
