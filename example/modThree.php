@@ -8,6 +8,7 @@ use FSM\Alphabet\Letter;
 use FSM\FSM\FSMArrayBuilder;
 use FSM\FSM\FSMObjectBuilder;
 use FSM\FSM\FSMService;
+use FSM\Interfaces\FSMServiceInterface;
 use FSM\State\FinalState;
 use FSM\Transition\Transition;
 
@@ -45,6 +46,7 @@ $fsmArrayBuilder->setTransitions([
 ]);
 $fsm = $fsmArrayBuilder->getFSM();
 
+/** @var FSMServiceInterface $fsmService */
 $fsmService = new FSMService($fsm);
 
 // Example 1 - 110
@@ -96,6 +98,7 @@ $fsmObjectBuilder->addTransition(new Transition($state2, $letter0, $state1));
 $fsmObjectBuilder->addTransition(new Transition($state2, $letter1, $state2));
 $fsm = $fsmObjectBuilder->getFSM();
 
+/** @var FSMServiceInterface $fsmService */
 $fsmService = new FSMService($fsm);
 
 echo "Example 3 - 1100 1100 1010 1101 1001 1011:\n";
