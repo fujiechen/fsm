@@ -61,6 +61,11 @@ Create a software module for generating an FSM (Finite State Machine). The API o
 ### Class Structure
 
 - FSM: the finite state machine
+  - FSM:
+    - FSM: The main FSM client, this is designed as a Model, only storing the essential data sets
+    - FSM Array Builder: Build FSM object by setting essential data in batch (array)
+    - FSM Object Builder: Build FSM object by inserting essential data individually
+    - FSM Service: The main service for the App, it has process and reset functionalities
   - Alphabet: Letter object set
     - Letter: Accepting letter in FSM, implemented Comparable interface
   - States: State object set
@@ -69,7 +74,10 @@ Create a software module for generating an FSM (Finite State Machine). The API o
     - FinalState: Accepting state with its name and output, extended from State, implemented Comparable interface
   - Transitions: Transition object set
     - Transition: Accepting transition with its state(State), input(Letter), and destination(State)
-  - Comparable interface: provide standard interface method to compare between objects
+  - Interfaces:
+    - Comparable interface: provide standard interface method to compare between objects
+    - FSM Service: provide standard interface methods for the main service, so leave more implementation possibility for other developers
+    - Builder: provide standard interface methods for the FSM builders
 
 ### Procedure
 
